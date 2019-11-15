@@ -3,6 +3,11 @@ package academy.learnprogramming;
 import java.util.ArrayList;
 
 public class MobilePhone {
-    ArrayList<String> name = new ArrayList<>();
-    ArrayList<String> phoneNumber = new ArrayList<>();
+    private String myNumber;
+    private ArrayList<Contact> myContacts;
+
+    public MobilePhone(String myNumber) {
+        this.myNumber = myNumber;
+        this.myContacts = new ArrayList<Contact>();
+    }
 }
