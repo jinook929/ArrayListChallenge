@@ -49,6 +49,15 @@ public class Main {
 
     }
 
+    // Print contacts -> Cannot use b/c myContacts is "private"
+//    private static void printContacts() {
+//        mobilePhone.printContacts();
+//        System.out.println("Contact List");
+//        for(int i = 0; i < mobilePhone.myContacts.size(); i++) {
+//            System.out.println((i + 1) + ". " + mobilePhone.myContacts.get(i).getName() + " -> " + mobilePhone.myContacts.get(i).getPhoneNumber());
+//        }
+//    }
+
     // Add a new contact
     private static void addNewContact() {
         System.out.println("Enter new contact name : ");
