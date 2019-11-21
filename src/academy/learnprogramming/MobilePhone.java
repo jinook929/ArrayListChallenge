@@ -14,6 +14,8 @@ public class MobilePhone {
         this.myContacts = new ArrayList<Contact>();
     }
 
+
+
     // Add a new contact
     public boolean addNewContact(Contact contact) {
         if(findContact(contact.getName()) >= 0) {
@@ -30,6 +32,9 @@ public class MobilePhone {
         int foundPosition = findContact(oldContact);
         if(foundPosition < 0) {
             System.out.println(oldContact.getName() + " was not found.");
+            return false;
+        } else if(findContact(newContact.getName()) != -1) {
+            System.out.println("The contact you entered already exists.");
             return false;
         }
 
@@ -67,12 +72,12 @@ public class MobilePhone {
     }
 
     // Query a contact
-    public String queryContact(Contact contact) {
-        if(findContact(contact) >= 0) {
-            return contact.getName();
-        }
-        return null;
-    }
+//    public String queryContact(Contact contact) {
+//        if(findContact(contact) >= 0) {
+//            return contact.getName();
+//        }
+//        return null;
+//    }
 
     public Contact queryContact(String name) {
         int position = findContact(name);
